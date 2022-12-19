@@ -50,4 +50,16 @@ Route::get('products/{id}', [Welcome::class,'showProductList']);
 // Named Route
 Route::get('/products',[Welcome::class,'index'])->name('all_products');
 
+
+// Route Group
+// Route::group(['prefix'=>'accounts','as'=>'account.'], function(){
+//     Route::get('/', 'AccountController@index')->name('index');
+//     Route::get('connect', 'AccountController@connect')->name('connect');
+// });
+
+// Route::group(['prefix'=>'quotes','as'=>'quote.'], function(){
+//     Route::get('/', 'QuoteController@index')->name('index');
+//     Route::get('connect', 'QuoteController@create')->name('create');
+// });
+
 require __DIR__.'/auth.php';
