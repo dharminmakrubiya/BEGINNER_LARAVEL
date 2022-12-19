@@ -37,9 +37,14 @@ Route::get('/greeting', function () {
 //Route View
 Route::view('/welcome', 'welcome');
 
+Route::get('/products',[Welcome::class,'index']);
 
 // Basic Controllers with Routes
 Route::get('/welcome',[Welcome::class,'welcomeUser']);
+
+
+//Route Parameters 
+Route::get('products/{id}', [Welcome::class,'showProductList']);
 
 
 require __DIR__.'/auth.php';
