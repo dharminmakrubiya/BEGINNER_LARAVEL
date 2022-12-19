@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Welcome;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +34,12 @@ Route::get('/greeting', function () {
     return 'Hello World';
 });
 
+//Route View
+Route::view('/welcome', 'welcome');
+
+
+// Basic Controllers with Routes
+Route::get('/welcome',[Welcome::class,'welcomeUser']);
 
 
 require __DIR__.'/auth.php';
