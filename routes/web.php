@@ -47,4 +47,7 @@ Route::get('/welcome',[Welcome::class,'welcomeUser']);
 Route::get('products/{id}', [Welcome::class,'showProductList']);
 
 
+// Named Route
+Route::get('/products',[Welcome::class,'index'])->name('all_products');
+
 require __DIR__.'/auth.php';

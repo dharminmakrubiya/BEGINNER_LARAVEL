@@ -9,6 +9,11 @@ class Welcome extends Controller
 
     public function index()
     {
+
+
+        print_r(route('all_products'));
+
+
         $data = [
             'ProductOne'    =>  'Iphone',
             'ProductTwo'    =>  'Samsung',
